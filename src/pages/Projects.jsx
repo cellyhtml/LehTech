@@ -56,13 +56,6 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-
-              {/* Mantendo exclusivamente o botão principal de navegação oficial externa */}
-              <div className="project-links">
-                <a href={project.link} target="_blank" rel="noreferrer" className="project-link">
-                  Ver Projeto <span>→</span>
-                </a>
-              </div>
             </div>
           ))}
         </div>
