@@ -11,7 +11,7 @@ const Contact = () => {
 
   // Estado para feedback do e-mail copiado
   const [copied, setCopied] = useState(false);
-  const emailProfissional = "leandra.marcely@hotmail.com"; // Substitua caso prefira outro
+  const emailProfissional = "lehmarcely123@gmail.com";
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(emailProfissional);
@@ -66,7 +66,7 @@ const Contact = () => {
             </div>
 
             <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>
-              Ou envie diretamente para: <strong>{emailProfissional}</strong>
+              E-mail: <strong>{emailProfissional}</strong>
             </span>
           </div>
 
