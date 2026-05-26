@@ -65,9 +65,6 @@ const Contact = () => {
               </button>
             </div>
 
-            <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>
-              E-mail: <strong>{emailProfissional}</strong>
-            </span>
           </div>
 
           {/* Redes Sociais Alternativas com os links reais de alta autoridade da Leandra */}
