@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Projects = () => {
-  // Lista altamente selecionada com os portais públicos de Ribeirão das Neves e o Clube do Livro com descrições focadas em impacto
+  // Lista altamente selecionada com as novas imagens locais e profissionais
   const projectsData = [
     {
       id: 1,
@@ -9,7 +9,7 @@ const Projects = () => {
       description: "Responsável pelo desenvolvimento frontend e conformidade de acessibilidade digital (padrões e-MAG / WCAG). Garantia de experiência fluida e inclusiva para mais de 300 mil cidadãos.",
       tags: ["React", "Acessibilidade", "e-Gov", "SEO"],
       link: "https://ribeiraodasneves.mg.gov.br/",
-      image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80"
+      image: "/prefeitura_projeto.png"
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ const Projects = () => {
       description: "Criação de interface de usuário (UI) focada em extrema performance. Otimizado para suportar milhares de acessos simultâneos durante inscrições de processos públicos, sem perda de estabilidade.",
       tags: ["React", "UI/UX Premium", "Otimização", "Mobile-First"],
       link: "https://concursos.ribeiraodasneves.mg.gov.br/",
-      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80"
+      image: "/concursos_projeto.png"
     },
     {
       id: 3,
@@ -25,7 +25,7 @@ const Projects = () => {
       description: "Desenvolvimento completo da plataforma interativa para comunidade literária. Integração de interfaces modernas, cronogramas de leitura coletiva e animações fluidas para retenção de usuários.",
       tags: ["React", "TailwindCSS", "Vercel", "Design Criativo"],
       link: "https://prettygirlsbookclub.vercel.app/",
-      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80"
+      image: "/bookclub_projeto.png"
     }
   ];
 
