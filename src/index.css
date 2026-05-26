@@ -728,3 +728,217 @@ body.alto-contraste .social-icon:hover {
     font-size: 0.8rem;
   }
 }
+
+/* ==========================================================================
+   WIDGET FLUTUANTE DO TERMINAL CONSOLE HACKER (Canto Direito)
+   ========================================================================== */
+.terminal-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px; /* Oposto simetricamente ao widget de acessibilidade na esquerda! */
+  z-index: 9999;
+}
+
+.terminal-toggle-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #121214;
+  color: #00ff00; /* Verde Matrix */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.2s, box-shadow 0.2s;
+}
+
+.terminal-toggle-btn:hover,
+.terminal-toggle-btn:focus {
+  transform: scale(1.1);
+  border-color: #00ff00;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.35);
+  outline: none;
+}
+
+.terminal-toggle-btn.active {
+  transform: rotate(360deg) scale(0.92);
+  background-color: #050505;
+  border-color: #d946ef;
+  color: #d946ef;
+}
+
+/* Janela do Terminal */
+.terminal-window {
+  position: absolute;
+  bottom: 72px;
+  right: 0;
+  width: 380px;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  animation: slideUpFade 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  background: rgba(10, 10, 12, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.terminal-bar {
+  background-color: #16161a;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-dot.red { background-color: #ef4444; }
+.terminal-dot.yellow { background-color: #f59e0b; }
+.terminal-dot.green { background-color: #10b981; }
+
+.terminal-title {
+  color: #888892;
+  font-size: 0.8rem;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 0.5rem;
+  flex-grow: 1;
+}
+
+.terminal-close {
+  background: transparent;
+  border: none;
+  color: #888892;
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.terminal-close:hover {
+  color: #ef4444;
+}
+
+.terminal-body {
+  flex-grow: 1;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.terminal-logs {
+  flex-grow: 1;
+  overflow-y: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.88rem;
+  color: #00ff00; /* Verde Hacker */
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.terminal-line {
+  white-space: pre-wrap;
+  margin-bottom: 0.4rem;
+}
+
+.terminal-input-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.88rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 0.8rem;
+}
+
+.terminal-prompt {
+  color: #d946ef; /* Prompt Rosa */
+  white-space: nowrap;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+}
+
+/* ==========================================================================
+   TEMA DE MUDANÇA GLOBAL: MODO MATRIX HACKER
+   ========================================================================== */
+body.theme-matrix {
+  background-color: #050505 !important;
+  color: #00ff00 !important;
+  --bg-light: #050505;
+  --bg-card: #0c0c0c;
+  --primary: #00ff00;
+  --secondary: #00cc00;
+  --accent: #33ff33;
+  --text-main: #33ff33;
+  --text-muted: #00aa00;
+  --border-light: rgba(0, 255, 0, 0.2);
+}
+
+body.theme-matrix .navbar {
+  background-color: rgba(5, 5, 5, 0.95) !important;
+  border-bottom: 2px solid #00ff00 !important;
+}
+
+body.theme-matrix .btn-primary {
+  background-color: #00ff00 !important;
+  color: #000000 !important;
+}
+
+body.theme-matrix .btn-primary:hover {
+  background-color: #33ff33 !important;
+  box-shadow: 0 0 15px #00ff00;
+}
+
+body.theme-matrix .btn-outline {
+  color: #00ff00;
+  border-color: rgba(0, 255, 0, 0.3);
+}
+
+body.theme-matrix .btn-outline:hover {
+  background-color: rgba(0, 255, 0, 0.08);
+  border-color: #00ff00;
+}
+
+body.theme-matrix .text-gradient {
+  color: #00ff00 !important;
+}
+
+body.theme-matrix .skill-tag {
+  background-color: rgba(0, 255, 0, 0.05) !important;
+  color: #00ff00 !important;
+  border-color: rgba(0, 255, 0, 0.2) !important;
+}
+
+body.theme-matrix .skill-tag:hover {
+  background-color: rgba(0, 255, 0, 0.15) !important;
+}
+
+@media (max-width: 480px) {
+  .terminal-window {
+    width: calc(100vw - 32px);
+    height: 400px;
+    right: -8px;
+  }
+}
+

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import AccessibilityWidget from './components/AccessibilityWidget'; // Novo Widget Flutuante Redondo
+import TerminalConsole from './components/TerminalConsole'; // Novo Terminal CLI Hacker
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -30,6 +31,7 @@ function App() {
         </Routes>
       </main>
       <AccessibilityWidget /> {/* Widget de Acessibilidade Flutuante Redondo */}
+      <TerminalConsole /> {/* Console CLI Hacker de Alta Performance */}
     </Router>
   );
 }
