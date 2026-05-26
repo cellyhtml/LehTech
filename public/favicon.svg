@@ -1,81 +1,26 @@
-<svg viewBox="140 20 280 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="handGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#7c3aed;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:1" />
+    <!-- Gradiente neon fúcsia para lilás brilhante idêntico à logo da LehTech -->
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d946ef;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c084fc;stop-opacity:1" />
     </linearGradient>
-    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="innerGlow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
-  <!-- Main hand shape with gradient -->
-  <g filter="url(#neonGlow)">
-    <!-- Palm -->
-    <ellipse cx="280" cy="240" rx="90" ry="110" fill="url(#handGradient)" opacity="0.9"/>
+  <!-- APENAS O MONITOR DE COMPUTADOR DA LOGO LEHTECH -->
+  <g>
+    <!-- Tela do Monitor (Espessa e nítida para alta legibilidade em 16x16) -->
+    <rect x="10" y="10" width="80" height="56" rx="8" stroke="url(#neonGradient)" stroke-width="4.5" fill="none" />
     
-    <!-- Thumb -->
-    <path d="M 220 200 Q 180 180 170 220 Q 175 250 210 245" fill="url(#handGradient)" opacity="0.9"/>
-    
-    <!-- Fingers -->
-    <path d="M 240 140 L 235 80 Q 240 70 250 80 L 255 140 Z" fill="url(#handGradient)" opacity="0.9"/>
-    <path d="M 280 125 L 280 50 Q 285 40 295 50 L 295 125 Z" fill="url(#handGradient)" opacity="0.9"/>
-    <path d="M 320 135 L 325 60 Q 330 50 340 60 L 335 135 Z" fill="url(#handGradient)" opacity="0.9"/>
-    <path d="M 350 155 L 360 85 Q 365 75 375 85 L 365 155 Z" fill="url(#handGradient)" opacity="0.9"/>
-    <path d="M 370 195 L 385 135 Q 390 125 400 135 L 385 200 Z" fill="url(#handGradient)" opacity="0.9"/>
-  </g>
+    <!-- Pé/Suporte do Monitor -->
+    <path d="M 38 66 L 30 84 L 70 84 L 62 66" stroke="url(#neonGradient)" stroke-width="4.5" stroke-linejoin="round" fill="none" />
+    <line x1="22" y1="84" x2="78" y2="84" stroke="url(#neonGradient)" stroke-width="4.5" stroke-linecap="round" />
 
-  <!-- Circuit nodes and connections -->
-  <g filter="url(#innerGlow)">
-    <!-- Left side finger connections (blue/cyan) -->
-    <circle cx="245" cy="100" r="12" fill="none" stroke="#00d4ff" stroke-width="3"/>
-    <circle cx="240" cy="100" r="8" fill="#00d4ff"/>
-    
-    <circle cx="290" cy="70" r="12" fill="none" stroke="#7c3aed" stroke-width="3"/>
-    <circle cx="290" cy="70" r="8" fill="#7c3aed"/>
-    
-    <circle cx="330" cy="85" r="12" fill="none" stroke="#7c3aed" stroke-width="3"/>
-    <circle cx="330" cy="85" r="8" fill="#7c3aed"/>
-    
-    <!-- Right side finger connections (magenta) -->
-    <circle cx="365" cy="110" r="12" fill="none" stroke="#ff00ff" stroke-width="3"/>
-    <circle cx="365" cy="110" r="8" fill="#ff00ff"/>
-    
-    <circle cx="380" cy="160" r="12" fill="none" stroke="#ff00ff" stroke-width="3"/>
-    <circle cx="380" cy="160" r="8" fill="#ff00ff"/>
-    
-    <!-- Palm connections -->
-    <circle cx="280" cy="210" r="14" fill="none" stroke="#00d4ff" stroke-width="3"/>
-    <circle cx="280" cy="210" r="10" fill="#00d4ff"/>
-    
-    <circle cx="250" cy="280" r="12" fill="none" stroke="#7c3aed" stroke-width="3"/>
-    <circle cx="250" cy="280" r="8" fill="#7c3aed"/>
-    
-    <circle cx="320" cy="290" r="12" fill="none" stroke="#ff00ff" stroke-width="3"/>
-    <circle cx="320" cy="290" r="8" fill="#ff00ff"/>
-    
-    <!-- Connection lines -->
-    <path d="M 245 100 L 280 210" stroke="#00d4ff" stroke-width="2" opacity="0.6" stroke-dasharray="5,5"/>
-    <path d="M 290 70 L 280 210" stroke="#7c3aed" stroke-width="2" opacity="0.6" stroke-dasharray="5,5"/>
-    <path d="M 365 110 L 280 210" stroke="#ff00ff" stroke-width="2" opacity="0.6" stroke-dasharray="5,5"/>
-    <path d="M 380 160 L 320 290" stroke="#ff00ff" stroke-width="2" opacity="0.6" stroke-dasharray="5,5"/>
-  </g>
-
-  <!-- Black outlines for definition -->
-  <g stroke="#000" stroke-width="1.5" fill="none" opacity="0.3">
-    <ellipse cx="280" cy="240" rx="90" ry="110"/>
-    <path d="M 220 200 Q 180 180 170 220 Q 175 250 210 245"/>
+    <!-- Cartão Interno do Avatar/Usuário na Esquerda (Assinatura do design) -->
+    <rect x="20" y="20" width="24" height="30" rx="5" stroke="url(#neonGradient)" stroke-width="3.2" fill="none" />
+    <!-- Cabeça do Avatar -->
+    <circle cx="32" cy="29" r="4.5" stroke="url(#neonGradient)" stroke-width="2.5" fill="none" />
+    <!-- Ombros do Avatar -->
+    <path d="M 25 44 Q 25 39 32 39 Q 39 39 39 44" stroke="url(#neonGradient)" stroke-width="2.5" fill="none" />
   </g>
 </svg>
